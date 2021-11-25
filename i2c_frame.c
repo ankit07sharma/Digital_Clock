@@ -1,4 +1,8 @@
+//This function consists of read and write I2C frame which are created using I2C fields
+
 #include"Header.h"
+
+//This function will allow master to write one byte to slave on a specific memory location
 void i2c_byte_write_frame(u8 sa,u8 mem,u8 d)
 {
 	bit ret;
@@ -18,6 +22,8 @@ void i2c_byte_write_frame(u8 sa,u8 mem,u8 d)
 	end: 
 	i2c_stop();
 }
+
+//This function will allow master to read one byte from a specific memory location in slave
 u8 i2c_byte_read_frame(u8 sa,u8 mem)
 {
 	bit ret;
@@ -42,15 +48,3 @@ u8 i2c_byte_read_frame(u8 sa,u8 mem)
 	i2c_stop();
 	return temp;
 }
-//void delayms(u16 a)
-//{
-//	u8 i;
-//	for(;a>0;a--)
-//	{
-//		i=250;
-//		while(i--);
-//		i=247;
-//		while(i--);
-//	}
-
-//}
