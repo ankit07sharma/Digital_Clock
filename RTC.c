@@ -1,5 +1,8 @@
 #include"Header.h"
-extern RTC m1;
+extern RTC m1;                           //We will use this structure varaible for reading RTC data
+
+
+//This function will initialize the digital clock at once only after it's creation
 void RTC_SET(u8 sec,u8 min,u8 hr,u8 day,u8 date,u8 month,u8 year)
 {
 	i2c_byte_write_frame(0xD0,0x0,sec);   //sec
@@ -11,6 +14,8 @@ void RTC_SET(u8 sec,u8 min,u8 hr,u8 day,u8 date,u8 month,u8 year)
 	i2c_byte_write_frame(0xD0,0x6,year);   //year
 }
 
+
+//This function will print the RTC context like hour,minute etc on the LCD
 void RTC_CONTEXT()
 {
 	lcd_cmd(0x89);
