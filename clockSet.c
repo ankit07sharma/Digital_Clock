@@ -1,3 +1,6 @@
+/*This file consist of logic for switches, here i created a logic to set time,date etc using two switches combination, both switches are connected to external
+interrupt pins P3.2 , P3.3*/
+
 #include"Header.h"
 #include<reg51.h>
 u8 countp,t;
