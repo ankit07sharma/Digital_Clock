@@ -1,3 +1,6 @@
+//Main function has while loop which will call RTC_CONTEXT() function simultaneously
+
+
 #include"Header.h"
 RTC m1;
 void main()
